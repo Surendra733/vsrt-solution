@@ -1,62 +1,132 @@
 import React from 'react';
 
 const About = () => {
+  const styles = {
+    section: {
+      backgroundColor: '#fff',
+      padding: '80px 0',
+      fontFamily: '"Poppins", sans-serif',
+    },
+    container: {
+      maxWidth: '1200px',
+      margin: '0 auto',
+      padding: '0 20px',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+      alignItems: 'center',
+      gap: '50px',
+    },
+    image: {
+      width: '100%',
+      borderRadius: '20px',
+      boxShadow: '0 10px 25px rgba(0,0,0,0.15)',
+      transition: 'transform 0.3s ease',
+    },
+    heading: {
+      fontSize: '2.5rem',
+      fontWeight: '700',
+      color: '#1f2937',
+      borderLeft: '5px solid #2563eb',
+      paddingLeft: '12px',
+      marginBottom: '20px',
+    },
+    highlight: {
+      color: '#2563eb',
+    },
+    paragraph: {
+      color: '#4b5563',
+      lineHeight: '1.7',
+      marginBottom: '20px',
+      fontSize: '1rem',
+    },
+    statsContainer: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      textAlign: 'center',
+      gap: '20px',
+      marginTop: '30px',
+    },
+    statNumber: {
+      fontSize: '2rem',
+      fontWeight: '700',
+      color: '#2563eb',
+      marginBottom: '5px',
+    },
+    statLabel: {
+      fontSize: '0.9rem',
+      color: '#6b7280',
+    },
+    button: {
+      display: 'inline-block',
+      marginTop: '30px',
+      backgroundColor: '#2563eb',
+      color: '#fff',
+      padding: '12px 30px',
+      borderRadius: '50px',
+      fontWeight: '600',
+      textDecoration: 'none',
+      boxShadow: '0 6px 15px rgba(37,99,235,0.3)',
+      transition: 'all 0.3s ease',
+    },
+  };
+
   return (
-    <section id="about" className="bg-white py-16">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          
-          {/* Left Side - Image or Illustration */}
-          <div className="relative">
-            <img
-              src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/media/7edb0f3f3c3f43d7ffb23d3a73b8b8c0.png"
-              alt="VSR Tech Solution team working"
-              className="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
-            />
-          </div>
+    <section id="about" style={styles.section}>
+      <div style={styles.container}>
+        {/* Left Image */}
+        <div style={{ textAlign: 'center' }}>
+          <img
+            src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/media/7edb0f3f3c3f43d7ffb23d3a73b8b8c0.png"
+            alt="VSR Tech Solution team working"
+            style={styles.image}
+            onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+            onMouseOut={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+          />
+        </div>
 
-          {/* Right Side - Text Content */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 border-l-4 border-blue-600 pl-3">
-              About <span className="text-blue-600">VSR Tech Solution</span>
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              At <strong>VSR Tech Solution</strong>, we are passionate about building smart, scalable, 
-              and future-ready digital products. Our focus is on delivering value-driven IT services that 
-              empower businesses to grow in a fast-changing technological world.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              With expertise in <span className="text-blue-600 font-semibold">Web Development, Mobile Apps, 
-              Cloud Integration, and Enterprise Solutions</span>, our mission is to bring your ideas to life 
-              through innovation and code excellence.
-            </p>
+        {/* Right Content */}
+        <div>
+          <h2 style={styles.heading}>
+            About <span style={styles.highlight}>VSR Tech Solution</span>
+          </h2>
 
-            {/* Stats Section */}
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <h3 className="text-3xl font-bold text-blue-600">50+</h3>
-                <p className="text-gray-500 text-sm">Projects Completed</p>
-              </div>
-              <div>
-                <h3 className="text-3xl font-bold text-blue-600">20+</h3>
-                <p className="text-gray-500 text-sm">Happy Clients</p>
-              </div>
-              <div>
-                <h3 className="text-3xl font-bold text-blue-600">8+</h3>
-                <p className="text-gray-500 text-sm">Tech Experts</p>
-              </div>
+          <p style={styles.paragraph}>
+            At <strong>VSR Tech Solution</strong>, we are passionate about building smart, scalable,
+            and future-ready digital products. Our focus is on delivering value-driven IT services
+            that empower businesses to grow in a fast-changing technological world.
+          </p>
+
+          <p style={styles.paragraph}>
+            With expertise in <span style={styles.highlight}>Web Development, Mobile Apps,
+            Cloud Integration, and Enterprise Solutions</span>, our mission is to bring your
+            ideas to life through innovation and code excellence.
+          </p>
+
+          {/* Stats Section */}
+          <div style={styles.statsContainer}>
+            <div>
+              <h3 style={styles.statNumber}>50+</h3>
+              <p style={styles.statLabel}>Projects Completed</p>
             </div>
-
-            {/* Button */}
-            <div className="mt-8">
-              <a
-                href="#services"
-                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition-all duration-300"
-              >
-                Explore Our Services
-              </a>
+            <div>
+              <h3 style={styles.statNumber}>20+</h3>
+              <p style={styles.statLabel}>Happy Clients</p>
+            </div>
+            <div>
+              <h3 style={styles.statNumber}>8+</h3>
+              <p style={styles.statLabel}>Tech Experts</p>
             </div>
           </div>
+
+          {/* Button */}
+          <a
+            href="#services"
+            style={styles.button}
+            onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#1e40af')}
+            onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#2563eb')}
+          >
+            Explore Our Services
+          </a>
         </div>
       </div>
     </section>
