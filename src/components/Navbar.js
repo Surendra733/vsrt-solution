@@ -18,8 +18,8 @@ const Navbar = () => {
           ☰ {/* Simple hamburger icon; use SVG for better look */}
         </button>
         <div className={`mobile-menu ${isOpen ? 'active' : ''}`}>
-          <Link to="/" className="navbar-link" onClick={() => setIsOpen(true)}>Home</Link>
-          <Link to="/about" className="navbar-link" onClick={() => setIsOpen(true)}>About</Link>
+          <Link to="/" className="navbar-link" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/about" className="navbar-link" onClick={() => setIsOpen(false)}>About</Link>
           <Link to="/services" className="navbar-link" onClick={() => setIsOpen(false)}>Services</Link>
           <Link to="/contact" className="navbar-link" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
