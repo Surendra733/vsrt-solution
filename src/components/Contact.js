@@ -53,7 +53,7 @@ const Contact = () => {
           </div>
           <button type="submit" className="form-button">Send Message</button>
         </form>
-        <p className="contact-info">Email: info@vsrtechsolution.com | Phone: +1-123-456-7890</p>
+        <p className="contact-info">Email: vsrtinfo@gmail.com | Phone: +91-8319428709</p>
       </div>
     </section>
   );
