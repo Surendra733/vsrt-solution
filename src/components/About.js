@@ -76,7 +76,7 @@ const About = () => {
         {/* Left Image */}
         <div style={{ textAlign: 'center' }}>
           <img
-            src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/media/7edb0f3f3c3f43d7ffb23d3a73b8b8c0.png"
+            src="https://www.istockphoto.com/photo/middle-eastern-lady-using-laptop-working-online-sitting-in-office-gm1434212178-475903282?utm_source=pixabay&utm_medium=affiliate&utm_campaign=sponsored_photo&utm_content=srp_topbanner-popular_media&utm_term=computer"
             alt="VSR Tech Solution team working"
             style={styles.image}
             onMouseOver={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
