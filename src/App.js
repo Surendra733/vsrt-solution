@@ -7,23 +7,19 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50"> {/* This is a remnant; remove if not needed, or style in CSS */}
+      <div className="min-h-screen bg-gray-50">
         <Navbar />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <About />
-              <Services />
-              <Contact />
-             
-            </>
-          } />
-          {/* Add more routes if needed, e.g.,<Route path="/about" element={<About />} /> */}
+          {/* Home Route */}
+          <Route path="/" element={<Hero />} />
+
+          {/* Other Routes */}
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
