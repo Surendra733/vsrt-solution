@@ -164,7 +164,7 @@ const Hero = () => {
           Welcome to <span style={styles.highlight}>VSR Tech Solution</span>
         </h1>
         <p style={styles.paragraph}>
-          Empowering Businesses with Smart, Scalable,flexible, and Secure Technology Solutions.
+          Empowering Businesses with Smart, Scalable, and Secure Technology Solutions.
           We specialize in <b>Web Development</b>, <b>App Development</b>, and <b>Software Solutions</b> —
           building reliable systems that drive innovation and growth.
         </p>
