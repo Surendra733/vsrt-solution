@@ -6,6 +6,8 @@ import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+serviceWorkerRegistration.register();  // <-- ye install app ko enable karta hai
 
 function App() {
   return (
@@ -24,7 +26,9 @@ function App() {
         <Footer />
       </div>
     </Router>
+    
   );
+  
 }
 
 export default App;
