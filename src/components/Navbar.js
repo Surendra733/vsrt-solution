@@ -21,10 +21,11 @@ const Navbar = () => {
       left: 0,
       width: '100%',
       zIndex: 1000,
-      backgroundColor: scrolled ? 'rgba(3, 7, 18, 0.85)' : 'transparent',
+      // Fixed transparent / glass background with smooth scroll transition
+      backgroundColor: scrolled ? 'rgba(3, 7, 18, 0.9)' : 'transparent',
       backdropFilter: scrolled ? 'blur(16px)' : 'none',
-      borderBottom: scrolled ? '1px solid rgba(250, 204, 21, 0.15)' : '1px solid rgba(255, 255, 255, 0.05)',
-      boxShadow: scrolled ? '0 10px 30px rgba(0, 0, 0, 0.5)' : 'none',
+      borderBottom: scrolled ? '1px solid rgba(250, 204, 21, 0.2)' : '1px solid rgba(255, 255, 255, 0.05)',
+      boxShadow: scrolled ? '0 10px 30px rgba(0, 0, 0, 0.6)' : 'none',
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
       fontFamily: "'Inter', 'Poppins', sans-serif",
     },
@@ -43,18 +44,18 @@ const Navbar = () => {
       textDecoration: 'none',
     },
     logoBox: {
-      width: '40px',
-      height: '40px',
+      width: '38px',
+      height: '38px',
       background: 'linear-gradient(135deg, #facc15 0%, #f97316 100%)',
-      borderRadius: '12px',
+      borderRadius: '10px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      fontSize: '1.2rem',
-      boxShadow: '0 0 20px rgba(250, 204, 21, 0.4)',
+      fontSize: '1.1rem',
+      boxShadow: '0 0 15px rgba(250, 204, 21, 0.4)',
     },
     brandText: {
-      fontSize: '1.3rem',
+      fontSize: '1.25rem',
       fontWeight: '800',
       color: '#fff',
       letterSpacing: '-0.02em',
@@ -85,11 +86,11 @@ const Navbar = () => {
     },
     linksContainer: {
       display: 'flex',
-      gap: '8px',
+      gap: '6px',
       alignItems: 'center',
       background: 'rgba(255, 255, 255, 0.03)',
       border: '1px solid rgba(255, 255, 255, 0.08)',
-      padding: '6px',
+      padding: '5px',
       borderRadius: '40px',
       backdropFilter: 'blur(10px)',
     },
@@ -111,7 +112,7 @@ const Navbar = () => {
     ctaButton: {
       background: 'linear-gradient(135deg, #facc15 0%, #f97316 100%)',
       color: '#0f172a',
-      padding: '10px 24px',
+      padding: '10px 22px',
       borderRadius: '30px',
       fontWeight: '700',
       fontSize: '0.9rem',
@@ -125,9 +126,9 @@ const Navbar = () => {
       border: '1px solid rgba(255, 255, 255, 0.1)',
       color: '#fff',
       fontSize: '1.4rem',
-      width: '42px',
-      height: '42px',
-      borderRadius: '12px',
+      width: '40px',
+      height: '40px',
+      borderRadius: '10px',
       cursor: 'pointer',
       alignItems: 'center',
       justifyContent: 'center',
@@ -137,7 +138,7 @@ const Navbar = () => {
       top: '75px',
       left: '20px',
       right: '20px',
-      backgroundColor: 'rgba(15, 23, 42, 0.95)',
+      backgroundColor: 'rgba(15, 23, 42, 0.98)',
       backdropFilter: 'blur(20px)',
       border: '1px solid rgba(250, 204, 21, 0.2)',
       borderRadius: '20px',
@@ -150,7 +151,7 @@ const Navbar = () => {
       pointerEvents: isOpen ? 'auto' : 'none',
       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
       zIndex: 999,
-      boxShadow: '0 20px 40px rgba(0,0,0,0.6)',
+      boxShadow: '0 20px 40px rgba(0,0,0,0.8)',
     },
     mobileLink: (isActive) => ({
       color: isActive ? '#facc15' : '#fff',
@@ -222,7 +223,7 @@ const Navbar = () => {
         <Link to="/contact" style={styles.mobileLink(location.pathname === '/contact')} onClick={() => setIsOpen(false)}>Contact Enterprise</Link>
       </div>
 
-      {/* Responsive Inline CSS Helper */}
+      {/* Responsive Media Query Helper */}
       <style>{`
         @media (max-width: 900px) {
           .desktop-links { display: none !important; }
