@@ -18,44 +18,7 @@ body {
   padding: 0 1rem;
 }
 
-/* Navbar Styles */
-.navbar {
-  background-color: #2563eb; /* Blue */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
 
-.navbar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 64px;
-}
-
-.navbar-brand {
-  color: white;
-  font-weight: bold;
-  font-size: 1.25rem;
-  text-decoration: none;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.navbar-link {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  transition: color 0.3s;
-}
-
-.navbar-link:hover {
-  color: #bfdbfe; /* Light blue */
-}
 
 .hamburger {
   display: none;
@@ -259,29 +222,3 @@ body {
   text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 2rem 0;
-  }
-}
