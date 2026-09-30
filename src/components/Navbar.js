@@ -21,7 +21,6 @@ const Navbar = () => {
       left: 0,
       width: '100%',
       zIndex: 1000,
-      // Fixed transparent / glass background with smooth scroll transition
       backgroundColor: scrolled ? 'rgba(3, 7, 18, 0.9)' : 'transparent',
       backdropFilter: scrolled ? 'blur(16px)' : 'none',
       borderBottom: scrolled ? '1px solid rgba(250, 204, 21, 0.2)' : '1px solid rgba(255, 255, 255, 0.05)',
@@ -185,6 +184,7 @@ const Navbar = () => {
           <Link to="/" style={styles.link(location.pathname === '/')}>Home</Link>
           <Link to="/about" style={styles.link(location.pathname === '/about')}>About</Link>
           <Link to="/services" style={styles.link(location.pathname === '/services')}>Services</Link>
+          <Link to="/industrial-practice" style={styles.link(location.pathname === '/industrial-practice')}>Industrial Practice</Link>
           <Link to="/contact" style={styles.link(location.pathname === '/contact')}>Contact</Link>
         </div>
 
@@ -220,6 +220,7 @@ const Navbar = () => {
         <Link to="/" style={styles.mobileLink(location.pathname === '/')} onClick={() => setIsOpen(false)}>Home</Link>
         <Link to="/about" style={styles.mobileLink(location.pathname === '/about')} onClick={() => setIsOpen(false)}>About Us</Link>
         <Link to="/services" style={styles.mobileLink(location.pathname === '/services')} onClick={() => setIsOpen(false)}>Our Services</Link>
+        <Link to="/industrial-practice" style={styles.mobileLink(location.pathname === '/industrial-practice')} onClick={() => setIsOpen(false)}>Industrial Practice</Link>
         <Link to="/contact" style={styles.mobileLink(location.pathname === '/contact')} onClick={() => setIsOpen(false)}>Contact Enterprise</Link>
       </div>
 
