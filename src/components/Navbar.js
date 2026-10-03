@@ -48,7 +48,7 @@ const Navbar = () => {
                 VSR <span>TECH</span>
               </div> */}
               <div className="brand-name">
-  TEST NAVBAR
+  VSRTSolution
 </div>
             </Link>
 
@@ -78,7 +78,7 @@ const Navbar = () => {
           {/* RIGHT SIDE */}
           <div className="navbar-actions">
             <Link to="/contact" className="deploy-button">
-              MY NEW BUTTON
+              Inquery
             </Link>
 
             <button
