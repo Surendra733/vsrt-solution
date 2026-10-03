@@ -44,9 +44,12 @@ const Navbar = () => {
             <Link to="/" className="brand">
               <div className="logo-box">⚡</div>
 
-              <div className="brand-name">
+              {/* <div className="brand-name">
                 VSR <span>TECH</span>
-              </div>
+              </div> */}
+              <div className="brand-name">
+  TEST NAVBAR
+</div>
             </Link>
 
             <div className="status-badge desktop-status">
@@ -75,7 +78,7 @@ const Navbar = () => {
           {/* RIGHT SIDE */}
           <div className="navbar-actions">
             <Link to="/contact" className="deploy-button">
-              Deploy Project
+              MY NEW BUTTON
             </Link>
 
             <button
